@@ -24,6 +24,10 @@ import tensorflow.keras.models as KM
 
 from mrcnn import utils
 import sys
+import pathlib
+# Get path to the current file to parent, to add to path
+current_file_path = pathlib.Path(__file__).parent.absolute()
+sys.path.append(str(current_file_path))
 from parallel_model import ParallelModel
 
 # Requires TensorFlow 2.0+
